@@ -6,7 +6,7 @@ in ICLR 2022.
 
 ## Dynamic Token Normalization
 We design a novel normalization method, termed Dynamic Token Normalization (DTN), which inherits the advantages from LayerNorm and InstanceNorm. DTN can be seamlessly plugged into various transformer models, consistenly improving the performance.
-<div align=center><img src="DTN_token.png" width="1080" height="250"></div>
+<div align=center><img src="DTN_token.png" width="1080" height="210"></div>
 
 
 ## News
@@ -37,7 +37,7 @@ We design a novel normalization method, termed Dynamic Token Normalization (DTN)
 **3. Visualization** of attention distance for each head in ViT-S. Many heads in ViT-S with DTN have a small mean
 attention distance. Hence, DTN can capture local context well.
 
-<div align=center><img src="DTN_Head.png" width="1080" height="250"></div>
+<div align=center><img src="DTN_Head.png" width="1080" height="210"></div>
 
 ## Getting Started
 * Install [PyTorch](http://pytorch.org/)
