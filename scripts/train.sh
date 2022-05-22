@@ -16,10 +16,10 @@ output=output_test
 chmod -R 777 ./output_test
 
 python -m torch.distributed.launch --nproc_per_node=$NUM_PROC --master_port=1235 train.py \
---data_train_root "/cfs/cfs-4260a4096/260a4096/445-mds3/xintaowang/datasets/imagenet/train" \
---data_train_label "/cfs/cfs-4260a4096/260a4096/public_datasets/imagenet/train_map.txt" \
---data_val_root "/cfs/cfs-4260a4096/260a4096/445-mds3/xintaowang/datasets/imagenet/val" \
---data_val_label "/cfs/cfs-4260a4096/260a4096/public_datasets/imagenet/val_map.txt" \
+--data_train_root "data train" \
+--data_train_label "data train label" \
+--data_val_root "data val" \
+--data_val_label "data val label" \
 --config ${CONFIG} \
 --port 1254 \
 --batch-size 128 \
