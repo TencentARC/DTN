@@ -1,0 +1,6 @@
+lr: 5e-4
+weight_decay: 0.05
+img_size: 224
+amp: False
+drop: 0.
+drop_path: 0.1
