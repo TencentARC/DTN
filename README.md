@@ -6,13 +6,13 @@ in ICLR 2022.
 
 ## Dynamic Token Normalization
 We design a novel normalization method, termed Dynamic Token Normalization (DTN), which inherits the advantages from LayerNorm and InstanceNorm. DTN can be seamlessly plugged into various transformer models, consistenly improving the performance.
-<div align=center><img src="DTN_token.png" width="1080" height="200"></div>
+<div align=center><img src="DTN_token.png" width="1080" height="250"></div>
 
 
-# News
+## News
 **2022-5-20** We release the code of DTN in training ViT and PVT. More models with DTN will be released soon.
 
-# Main Results
+## Main Results
 **1. Performance** on ImageNet with ViT and its variants in terms of FLOPs, Parameters, Top-1, and Top-5 accuracies. H and C denote head number and embedding.
 
 | Model | Norm | H | C | FLOPs | Params | Top-1 | Top-5 | 
@@ -37,7 +37,7 @@ We design a novel normalization method, termed Dynamic Token Normalization (DTN)
 **3. Visualization** of attention distance for each head in ViT-S. Many heads in ViT-S with DTN have a small mean
 attention distance. Hence, DTN can capture local context well.
 
-<div align=center><img src="DTN_Head.png" width="1080" height="200"></div>
+<div align=center><img src="DTN_Head.png" width="1080" height="250"></div>
 
 ## Getting Started
 * Install [PyTorch](http://pytorch.org/)
@@ -68,6 +68,23 @@ cd DTN/scripts
 sh train.sh layer vit_norm_s_star configs/ViT/vit.yaml
 ```
 Number of GPUs and configuration file to use can be modified in train.sh
+
+## License
+DTN is released under BSD 3-Clause License.
+
+## Acknowledgement
+Our code is based on the implementation of timm package in PyTorch Image Models, https://github.com/rwightman/pytorch-image-models.
+
+## Citation
+If our code is helpful to your work, please cite:
+```
+@article{shao2021dynamic,
+  title={Dynamic Token Normalization Improves Vision Transformer},
+  author={Shao, Wenqi and Ge, Yixiao and Zhang, Zhaoyang and Xu, Xuyuan and Wang, Xiaogang and Shan, Ying and Luo, Ping},
+  journal={arXiv preprint arXiv:2112.02624},
+  year={2021}
+}
+```
 
 
 
